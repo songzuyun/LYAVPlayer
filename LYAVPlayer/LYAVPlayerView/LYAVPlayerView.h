@@ -61,6 +61,7 @@
 @property (nonatomic, strong,readonly) AVPlayerItem  *item;
 @property (nonatomic, strong,readonly) AVURLAsset    *urlAsset;
 @property (nonatomic, strong,readonly) AVPlayerLayer  *playerLayer;
+@property (nonatomic, strong) AVPlayerItemVideoOutput  *videoOutput;
 
 @property (nonatomic,weak) id<LYVideoPlayerDelegate> delegate;
 

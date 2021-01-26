@@ -201,6 +201,9 @@ NSString * const LYVideoPlayerErrorDomain = @"VideoPlayerErrorDomain";
     // 初始化playerItem
     self.item =[AVPlayerItem playerItemWithAsset:urlAsset];
     
+    self.videoOutput = [[AVPlayerItemVideoOutput alloc]initWithPixelBufferAttributes:@{(id)kCVPixelBufferPixelFormatTypeKey:@(kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange)}];
+    [self.item addOutput:self.videoOutput];
+    
     if (@available(iOS 10.0, *)) {
 
         self.item.preferredForwardBufferDuration =10.f;
